@@ -8070,11 +8070,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\j0k1r\\source\\repos\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "D:\\Document\\minecraftBack\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\j0k1r\\source\\repos\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "D:\\Document\\minecraftBack\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\j0k1r\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\j0k1r\\source\\repos\\WebApplication1\\WebApplication1\\obj\\",
+      "outputPath": "D:\\Document\\minecraftBack\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\j0k1r\\AppData\\Roaming\\NuGet\\NuGet.Config",
