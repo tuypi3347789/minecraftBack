@@ -10,6 +10,8 @@ namespace WebApplication1.Model
     {
         [Column("id")]
         public int Id { get; set; }
+        [Column("uuid")]
+        public string UUID { get; set; }
         [Column("player_name")]
         public string playerName { get; set; }
         [Column("player_account")]
