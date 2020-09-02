@@ -45,6 +45,7 @@ namespace WebApplication1.Controllers
             cmd.CommandText = @"SELECT * FROM player WHERE `player_name` = @name";
             cmd.Parameters.AddWithValue("@name", player.playerName);
             bool dr = cmd.ExecuteReader().HasRows;
+            Console.WriteLine("123");
             if (dr == true)
             {
                 return 1;

@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Document\\minecraftBack\\WebApplication1\\WebApplication1.csproj": {}
+    "D:\\MinecraftFile\\minecraftBack\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "D:\\Document\\minecraftBack\\WebApplication1\\WebApplication1.csproj": {
+    "D:\\MinecraftFile\\minecraftBack\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Document\\minecraftBack\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "D:\\MinecraftFile\\minecraftBack\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "D:\\Document\\minecraftBack\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "D:\\MinecraftFile\\minecraftBack\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\j0k1r\\.nuget\\packages\\",
-        "outputPath": "D:\\Document\\minecraftBack\\WebApplication1\\obj\\",
+        "outputPath": "D:\\MinecraftFile\\minecraftBack\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
           "C:\\Users\\j0k1r\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -87,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
