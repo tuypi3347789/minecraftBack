@@ -72,9 +72,17 @@
               "target": "Package",
               "version": "[7.0.7-m61, )"
             },
+            "System.Diagnostics.Process": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "System.IO": {
               "target": "Package",
               "version": "[4.3.0, )"
+            },
+            "System.Runtime.Extensions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
             },
             "Z.EntityFramework.Extensions": {
               "target": "Package",
