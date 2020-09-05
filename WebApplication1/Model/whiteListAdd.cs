@@ -16,7 +16,7 @@ namespace WebApplication1.Model
         {
             string str = @"D:\server\whitelist.json";
             string josnString = File.ReadAllText(str, Encoding.Default);
-            JArray jo = JArray.Parse(josnString);
+            JObject jo = JObject.Parse(josnString); 
             jo.Add(new JObject(
                 new JProperty("uuid", uuid),
                 new JProperty("name", name)
