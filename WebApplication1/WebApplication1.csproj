@@ -17,7 +17,9 @@
     </PackageReference>
     <PackageReference Include="MySql.Data" Version="8.0.21" />
     <PackageReference Include="MySql.Data.Entity" Version="7.0.7-m61" />
+    <PackageReference Include="System.Diagnostics.Process" Version="4.3.0" />
     <PackageReference Include="System.IO" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.Extensions" Version="4.3.1" />
     <PackageReference Include="Z.EntityFramework.Extensions" Version="4.0.91" />
   </ItemGroup>
 

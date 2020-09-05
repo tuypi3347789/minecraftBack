@@ -54,7 +54,6 @@ namespace WebApplication1.Controllers
         [HttpPost("register")]
         public int Post([FromBody] Player player)
         {
-
             player.playerPassword = HMACSHA256(player.playerPassword, "Min@!ecr@aft#");
             string connectionString = "server=localhost; database=minecraft; uid=root; pwd=User_123;";
             MySqlConnection conn = new MySqlConnection(connectionString);
@@ -67,7 +66,7 @@ namespace WebApplication1.Controllers
             if (dr == true)
             {
                 return 1;
-            } 
+            }
             else
             {
                 conn = new MySqlConnection(connectionString);
@@ -78,24 +77,23 @@ namespace WebApplication1.Controllers
                 bool er = cmd.ExecuteReader().HasRows;
                 conn.Close();
                 if (er == true)
-                { 
-                    return 2; 
-                } 
+                {
+                    return 2;
+                }
                 else
                 {
-                    Guid g = Guid.NewGuid();
                     conn = new MySqlConnection(connectionString);
                     conn.Open();
                     cmd = new MySqlCommand(sql, conn);
                     cmd.CommandText = @"INSERT INTO player (`uuid`, `player_name`, `player_account`, `player_password`, `player_email`) VALUES (@UUID, @name, @account, @password, @email)";
-                    cmd.Parameters.AddWithValue("@UUID", g);
+                    cmd.Parameters.AddWithValue("@UUID", player.UUID);
                     cmd.Parameters.AddWithValue("@name", player.playerName);
                     cmd.Parameters.AddWithValue("@account", player.playerAccount);
                     cmd.Parameters.AddWithValue("@password", player.playerPassword);
                     cmd.Parameters.AddWithValue("@email", player.playerEmail);
                     cmd.ExecuteNonQuery();
                     conn.Close();
-                    whiteListAdd.Main(g, player.playerName);
+                    whiteListAdd.Main(player.UUID, player.playerName);
                     return 3;
                 }
             }
