@@ -12,5 +12,5 @@ def main():
     with open("D:/MinecraftServer/whitelist.json","w") as f:
         data_out = output
         json.dump(data_out, f) 
-        print("add done!")
+        print("add")
 main()

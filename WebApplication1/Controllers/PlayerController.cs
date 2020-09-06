@@ -9,6 +9,7 @@ using Microsoft.Data.SqlClient;
 using MySql.Data.MySqlClient;
 using WebApplication1.Model;
 using System.Security.Cryptography;
+using System.Collections;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebApplication1.Controllers
@@ -47,6 +48,32 @@ namespace WebApplication1.Controllers
         public string Get(int id)
         {
             return "value";
+        }
+
+        [EnableCors("test")]
+        [HttpPost("login")]
+        public List<Player> LoginPost([FromBody] Player player)
+        {
+            player.playerPassword = HMACSHA256(player.playerPassword, "Min@!ecr@aft#");
+            string connectionString = "server=localhost; database=minecraft; uid=root; pwd=User_123;";
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.CommandText = @"SELECT * FROM player WHERE `player_account` = @account AND `player_password` = @password";
+            cmd.Parameters.AddWithValue("@account", player.playerAccount);
+            cmd.Parameters.AddWithValue("@password", player.playerPassword);
+            List<Player> list = new List<Player>();
+            using (MySqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    Player play = new Player();
+                    play.playerAccount = HMACSHA256(reader["player_account"].ToString(), "acc!ount@9970#85$74t1%");
+                    play.playerName = reader["player_name"].ToString();
+                    list.Add(play);
+                }
+            }
+            return list;
         }
 
         // POST api/<PlayerController>
